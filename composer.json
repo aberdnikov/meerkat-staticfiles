@@ -6,16 +6,16 @@
 	"license": "MIT",
 	"keywords": ["kohana", "module", "meerkat", "static files"],
 	"authors": [
-				{
-					"name": "Alexey Berdnikov",
-					"email": "aberdnikov@gmail.com",
-					"homepage": "https://github.com/aberdnikov",
-					"role": "Developer"
-			}
+		{
+			"name": "Alexey Berdnikov",
+			"email": "aberdnikov@gmail.com",
+			"homepage": "https://github.com/aberdnikov",
+			"role": "Developer"
+		}
 	],
 	"require": {
-			"php": ">=5.3",
-			"composer/installers": "*",
-			"meerkat/meerkat-event": "*"
+		"php": ">=5.3",
+		"composer/installers": "*",
+		"meerkat/meerkat-event": "*"
 	}
 }
