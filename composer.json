@@ -1,0 +1,21 @@
+{
+	"name": "meerkat/meerkat-staticfiles",
+	"type": "kohana-module",
+	"description": "StaticFiles module for MeerkatCMF (on Kohana 3.3)",
+	"homepage": "http://github.com/meerkat/core",
+	"license": "MIT",
+	"keywords": ["kohana", "module", "meerkat", "static files"],
+	"authors": [
+				{
+					"name": "Alexey Berdnikov",
+					"email": "aberdnikov@gmail.com",
+					"homepage": "https://github.com/aberdnikov",
+					"role": "Developer"
+			}
+	],
+	"require": {
+			"php": ">=5.3",
+			"composer/installers": "*",
+			"meerkat/meerkat-event": "*"
+	}
+}
