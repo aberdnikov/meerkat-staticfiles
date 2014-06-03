@@ -305,3 +305,15 @@ phpinfo();
 * 1: использовать в режиме production - выкладывается в DOCROOT и при следующем запросе отдается уже веб-сервером напрямую
 
 * параметр Kohana::$config->load('meerkat/staticfiles.deploy')
+
+
+В PHP
+~~~
+\Meerkat\StaticFiles\File::need_lib('jqueryui');
+Meerkat\StaticFiles\Js::instance()->add_onload('$( "#datepicker" ).datepicker();');
+~~~
+
+В HTML
+~~~
+<p>Date: <input type="text" id="datepicker"></p>
+~~~
