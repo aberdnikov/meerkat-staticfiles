@@ -8,6 +8,7 @@
     //не рекомендуется убирать префикс из восклицательного имени и делать папку например "media" или "static" в корне сайта,
     //так как вполне возможно, что когда-нибудь вам понадобится такой раздел сайта site.ru/media,
     //но этот урл использовать будет нельзя по причине занятости
+    $is_optimize = (Kohana::$environment == Kohana::PRODUCTION);
     return array(
         'js'           => array(
             //внешние подключаемые скрипты
@@ -15,21 +16,21 @@
                 //сжатие
                 'min'   => 0,
                 //сборка
-                'build' => 0,
+                'build' => $is_optimize,
             ),
             //inline-скрипты
             'inline'   => array(
                 //сжатие
                 'min'   => 0,
                 //сборка
-                'build' => 0,
+                'build' => $is_optimize,
             ),
             //скрипты выполняющиеся после загрузки страницы
             'onload'   => array(
                 //сжатие
                 'min'   => 0,
                 //сборка
-                'build' => 0,
+                'build' => $is_optimize,
             ),
         ),
         'css'          => array(
@@ -38,20 +39,20 @@
                 //сжатие
                 'min'   => 0,
                 //сборка
-                'build' => 0,
+                'build' => $is_optimize,
             ),
             //inline-стили
             'inline'   => array(
                 //сжатие
                 'min'   => 0,
                 //сборка
-                'build' => 0,
+                'build' => $is_optimize,
             ),
         ),
         //показывать подсветку синтаксиса скрипта, расположенного в static-files директории
         'show_php'     => 0,
         //выкладывать файл на сервер (в режиме разработке 0 - отдается PHP скриптом, в режиме production 1 - выкладывается в DOCROOT и при следующем запросе отдается уже веб-сервером напрямую)
-        'deploy'       => 0,
+        'deploy'       => $is_optimize,
         'static_route' => $static_route,
         'static_url'   => '/' . $static_route,
         'static_dir'   => DOCROOT . $static_route,
